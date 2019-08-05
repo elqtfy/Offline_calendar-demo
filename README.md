@@ -1,4 +1,5 @@
 # Scheduling with Google Calendar
+[Demo Video](https://youtu.be/qDPPWxxtmxk)<br>
 Multiple users want to schedule a meeting when all of them are available.<br><br>
 
 1. Gather each user's schedule from their Google Calendar.<br>
@@ -6,3 +7,4 @@ Multiple users want to schedule a meeting when all of them are available.<br><br
 3. Send text messages to users to ask their preference via Twilio.<br><br>
 
 ![img](resize.png)
+
