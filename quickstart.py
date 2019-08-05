@@ -19,14 +19,14 @@ import os
 SCOPES = 'https://www.googleapis.com/auth/calendar'
 store = file.Storage('credentials.json')
 
-# flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
-# creds = tools.run_flow(flow, store)
+flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
+creds = tools.run_flow(flow, store)
 
 creds = store.get()
 
-if not creds or creds.invalid:
-    flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
-    creds = tools.run_flow(flow, store)
+# if not creds or creds.invalid:
+#     flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
+#     creds = tools.run_flow(flow, store)
 service = build('calendar', 'v3', http=creds.authorize(Http()))
 
 # Call the Calendar API
